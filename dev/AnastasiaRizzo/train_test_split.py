@@ -55,7 +55,7 @@ def split_train_test (X, y, split_size, columns1, table, index):
                 KNN_pred = KNN.predict(X_test)
                 KNN_accuracy = accuracy_score(KNN_pred, y_test)
 
-                KNN_params = {'n_neighbors':[1,2,3,4,5,6,7,8,9,10]}
+                KNN_params = {'n_neighbors':[3,5,7,9]}
                 KNN1 = GridSearchCV(KNN, param_grid = KNN_params)
                 KNN1.fit(X_train, y_train)
                 KNN1_pred = KNN1.predict(X_test)
@@ -92,7 +92,7 @@ def random_state (X, y, random1, columns2, table1, index):
                 KNN_pred = KNN.predict(X_test)
                 KNN_accuracy = accuracy_score(KNN_pred, y_test)
 
-                KNN_params = {'n_neighbors':[1,2,3,4,5,6,7,8,9,10]}
+                KNN_params = {'n_neighbors':[3,5,7,9]}
                 KNN1 = GridSearchCV(KNN, param_grid = KNN_params)
                 KNN1.fit(X_train, y_train)
                 KNN1_pred = KNN1.predict(X_test)
