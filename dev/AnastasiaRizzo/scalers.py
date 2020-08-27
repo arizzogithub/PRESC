@@ -35,14 +35,14 @@ def scalers (X_train, y_train, X_test, y_test):
     '''
     
     KNN = KNeighborsClassifier()
-    KNN_params = {'n_neighbors':[1,2,3,4,5,6,7,8,9,10]}
+    KNN_params = {'n_neighbors':[3,5,7,9]}
     KNN1 = GridSearchCV(KNN, param_grid = KNN_params)
     KNN1.fit(X_train, y_train)
     KNN1.best_params_
     KNN1_pred = KNN1.predict(X_test)
 
     models = []
-    models.append(("K-Nearest Neighbour:", KNeighborsClassifier(n_neighbors = 1)))
+    models.append(("K-Nearest Neighbour:", KNeighborsClassifier(n_neighbors = 3)))
     names = []
 
     for name, model in models:
